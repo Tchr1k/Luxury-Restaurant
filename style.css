@@ -1243,9 +1243,14 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    width: auto;
 }
 
 .guest-auth-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 98px;
     text-decoration: none;
     color: var(--light-gold);
     border: 1px solid rgba(212, 175, 55, 0.45);
@@ -1281,4 +1286,5 @@ body {
         display: none;
     }
 }
+
 
