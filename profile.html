@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAVANE - Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="inner-page">
+    <nav class="navbar">
+        <a href="index.html" class="logo">SAVANE</a>
+        <ul class="nav-menu">
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html#menu">Menu</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <a href="profile.html" class="nav-profile-btn" id="nav-profile-btn" title="Go to profile">
+            <img id="nav-profile-image" class="nav-profile-image" src="" alt="Profile picture">
+            <span id="nav-profile-name" class="nav-profile-name">Profile</span>
+        </a>
+        <div class="guest-auth-links" id="guest-auth-links">
+            <a href="login.html" class="guest-auth-link">Log In</a>
+            <a href="register.html" class="guest-auth-link">Register</a>
+        </div>
+        <div class="auth-controls">
+            <span id="auth-status" class="auth-status">Profile</span>
+            <button id="logout-btn" class="logout-btn" onclick="logout()" type="button">Log out</button>
+        </div>
+        <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <main class="page-main">
+        <section class="profile page-section reveal-on-scroll" id="profile">
+            <h1 class="section-title">Profile</h1>
+            <p class="section-subtitle">Update your account and view your ordered dishes.</p>
+
+            <div class="profile-banner reveal-on-scroll" id="profile-banner">
+                <div class="profile-avatar" id="profile-avatar">G</div>
+                <div class="profile-banner-text">
+                    <h2 id="profile-banner-name">Guest User</h2>
+                    <p id="profile-banner-email">Not logged in</p>
+                </div>
+            </div>
+
+            <div class="profile-grid">
+                <form id="profile-form" class="profile-form">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input id="profile-name" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input id="profile-email" type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input id="profile-password" type="password" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Save Profile</button>
+                </form>
+
+                <div class="orders-panel">
+                    <h2>Order History</h2>
+                    <div id="profile-orders"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="scrypt.js"></script>
+</body>
+</html>

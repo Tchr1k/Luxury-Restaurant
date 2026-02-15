@@ -13,14 +13,27 @@
     <nav class="navbar">
         <a href="#" class="logo">SAVANE</a>
         <ul class="nav-menu">
-            <li><a href="#hero">მთავარი</a></li>
-            <li><a href="#about">ჩვენს შესახებ</a></li>
-            <li><a href="#menu">მენიუ</a></li>
-            <li><a href="#gallery">გალერეა</a></li>
-            <li><a href="#booking">ჯავშანი</a></li>
-            <li><a href="#contact">კონტაქტი</a></li>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#booking">Booking</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
         <button class="book-btn" onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">Book a Table</button>
+        <a href="profile.html" class="nav-profile-btn" id="nav-profile-btn" title="Go to profile">
+            <img id="nav-profile-image" class="nav-profile-image" src="" alt="Profile picture">
+            <span id="nav-profile-name" class="nav-profile-name">Profile</span>
+        </a>
+        <div class="guest-auth-links" id="guest-auth-links">
+            <a href="login.html" class="guest-auth-link">Log In</a>
+            <a href="register.html" class="guest-auth-link">Register</a>
+        </div>
+        <div class="auth-controls">
+            <span id="auth-status" class="auth-status">Not logged in</span>
+            <button id="logout-btn" class="logout-btn" onclick="logout()" type="button">Log out</button>
+        </div>
         <button class="mobile-menu-btn" onclick="toggleMenu()">
             <span></span>
             <span></span>
@@ -38,9 +51,7 @@
                 <a href="#menu" class="btn-secondary">მენიუს ნახვა</a>
             </div>
         </div>
-    </section>
-
-    <!-- About Section -->
+    </section>`r`n<!-- About Section -->
     <section class="about" id="about">
         <div>
             <img src="https://icdn.lenta.ru/images/2025/05/21/16/20250521165803005/wide_4_3_860ec528eafda200350977bef2431281.jpg" alt="Chef" class="about-image">
@@ -54,81 +65,48 @@
         </div>
     </section>
 
-    <!-- Registration Section -->
-    <section class="registration" id="registration">
-        <h2 class="section-title">რეგისტრაცია</h2>
-        <p class="section-subtitle">შექმენით ანგარიში და მიიღეთ ექსკლუზიური შეთავაზებები</p>
-        <form class="reg-form" onsubmit="handleRegistration(event)">
-            <div class="form-group">
-                <label>სახელი</label>
-                <input type="text" placeholder="თქვენი სახელი" required>
-            </div>
-            <div class="form-group">
-                <label>გვარი</label>
-                <input type="text" placeholder="თქვენი გვარი" required>
-            </div>
-            <div class="form-group">
-                <label>ელ. ფოსტა</label>
-                <input type="email" placeholder="example@email.com" required>
-            </div>
-            <div class="form-group">
-                <label>ტელეფონი</label>
-                <input type="tel" placeholder="+995 XXX XXX XXX" required>
-            </div>
-            <div class="form-group">
-                <label>პაროლი</label>
-                <input type="password" placeholder="მინიმუმ 8 სიმბოლო" required>
-            </div>
-            <button type="submit" class="submit-btn">რეგისტრაცია</button>
-            <div class="social-login">
-                <button type="button" class="social-btn">🍎 Apple</button>
-                <button type="button" class="social-btn">G Google</button>
-            </div>
-        </form>
-    </section>
-
-    <!-- Booking Section -->
-    <section class="booking" id="booking">
-        <h2 class="section-title">მაგიდის დაჯავშნა</h2>
-        <p class="section-subtitle">დაგვიჯავშნეთ მაგიდა და ისიამოვნეთ დაუვიწყარი საღამოთი</p>
+    <!-- Registration Section -->`r`n<!-- Booking Section -->
+        <section class="booking" id="booking">
+        <h2 class="section-title">Book a Table</h2>
+        <p class="section-subtitle">Reserve your table for an unforgettable evening</p>
         <form class="booking-form" onsubmit="handleBooking(event)">
             <div class="form-row">
                 <div>
-                    <label>სახელი</label>
-                    <input type="text" placeholder="თქვენი სახელი" required>
+                    <label>Name</label>
+                    <input type="text" placeholder="Your name" required>
                 </div>
                 <div>
-                    <label>ტელეფონი</label>
+                    <label>Phone</label>
                     <input type="tel" placeholder="+995 XXX XXX XXX" required>
                 </div>
             </div>
             <div class="form-row">
                 <div>
-                    <label>ელ. ფოსტა</label>
+                    <label>Email</label>
                     <input type="email" placeholder="example@email.com" required>
                 </div>
                 <div>
-                    <label>ადამიანების რაოდენობა</label>
+                    <label>Guests</label>
                     <select required>
-                        <option value="">აირჩიეთ</option>
-                        <option value="1">1 ადამიანი</option>
-                        <option value="2">2 ადამიანი</option>
-                        <option value="3">3 ადამიანი</option>
-                        <option value="4">4 ადამიანი</option>
-                        <option value="5">5 ადამიანი</option>
-                        <option value="6">6+ ადამიანი</option>
+                        <option value="">Select</option>
+                        <option value="1">1 person</option>
+                        <option value="2">2 people</option>
+                        <option value="3">3 people</option>
+                        <option value="4">4 people</option>
+                        <option value="5">5 people</option>
+                        <option value="6">6+ people</option>
                     </select>
                 </div>
             </div>
             <div class="form-row">
                 <div>
-                    <label>თარიღი</label>
+                    <label>Date</label>
                     <input type="date" required>
                 </div>
                 <div>
-                    <label>დრო</label>
+                    <label>Time</label>
                     <select required>
-                        <option value="">აირჩიეთ დრო</option>
+                        <option value="">Select time</option>
                         <option value="12:00">12:00</option>
                         <option value="12:30">12:30</option>
                         <option value="13:00">13:00</option>
@@ -145,10 +123,10 @@
                 </div>
             </div>
             <div class="form-group">
-                <label>სპეციალური მოთხოვნა (არასავალდებულო)</label>
-                <textarea placeholder="მაგ: ფანჯარასთან, ტერასაზე, დაბადების დღე, ალერგია..."></textarea>
+                <label>Special Requests (optional)</label>
+                <textarea placeholder="Window table, celebration, allergies..."></textarea>
             </div>
-            <button type="submit" class="submit-btn">დაჯავშნა</button>
+            <button type="submit" class="submit-btn">Book Now</button>
         </form>
     </section>
 
@@ -168,8 +146,7 @@
             <!-- Menu items will be dynamically loaded -->
         </div>
     </section>
-
-    <!-- Gallery Section -->
+<!-- Gallery Section -->
     <section class="gallery" id="gallery">
         <h2 class="section-title">გალერეა</h2>
         <p class="section-subtitle">გადაღებული მომენტები ჩვენი რესტორნიდან</p>
@@ -267,3 +244,10 @@
     <script src="scrypt.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
