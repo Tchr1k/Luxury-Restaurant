@@ -1288,3 +1288,301 @@ body {
 }
 
 
+/* Mobile-only refinements for index layout and navigation */
+@media (max-width: 968px) {
+    section {
+        padding: 78px 1.2rem;
+    }
+
+    .navbar {
+        top: 8px;
+        width: calc(100% - 1rem);
+        padding: 0.65rem 0.9rem;
+        border-radius: 18px;
+    }
+
+    .logo {
+        font-size: 1.45rem;
+        letter-spacing: 1.6px;
+    }
+
+    .nav-menu {
+        top: 74px;
+        left: 0;
+        right: 0;
+        transform: translateY(-120%);
+        transition: transform 0.28s ease;
+        width: calc(100% - 1rem);
+        margin: 0 auto;
+        border: 1px solid rgba(212, 175, 55, 0.24);
+        border-radius: 16px;
+        padding: 1rem;
+        gap: 0.6rem;
+        max-height: calc(100dvh - 92px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    .nav-menu.active {
+        left: 0;
+        transform: translateY(0);
+    }
+
+    .nav-menu li,
+    .nav-menu a {
+        width: 100%;
+    }
+
+    .nav-menu a {
+        display: block;
+        text-align: center;
+        font-size: 0.82rem;
+        padding: 0.8rem 0.95rem;
+    }
+
+    .mobile-menu-btn {
+        min-width: 42px;
+        min-height: 42px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 100svh;
+        height: auto;
+        padding: 120px 0.85rem 64px;
+        background-size: cover;
+        background-position: center;
+        animation: none;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 620px;
+        padding: 0.8rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.4rem, 10vw, 3.2rem);
+        line-height: 1.08;
+        letter-spacing: 2px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.98rem;
+        letter-spacing: 1px;
+        margin-bottom: 1.6rem;
+    }
+
+    .hero-buttons {
+        gap: 0.8rem;
+        width: 100%;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: min(100%, 320px);
+        margin: 0 auto;
+        padding: 1rem 1.2rem;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: clamp(2rem, 8.5vw, 2.7rem);
+        margin-bottom: 0.75rem;
+        letter-spacing: 1.5px;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 2.1rem;
+    }
+
+    .about {
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .about-image {
+        height: min(72vw, 370px);
+        box-shadow: 10px 10px 0 var(--gold);
+    }
+
+    .about-content h2 {
+        font-size: 2.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .about-content p {
+        font-size: 0.98rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+    }
+
+    .chef-signature {
+        font-size: 1.7rem;
+    }
+
+    .booking-form {
+        padding: 1.25rem;
+    }
+
+    .form-row {
+        gap: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea {
+        font-size: 16px;
+        padding: 0.88rem;
+    }
+
+    .submit-btn {
+        padding: 1rem;
+        min-height: 46px;
+        letter-spacing: 1px;
+    }
+
+    .menu-tabs {
+        gap: 0.65rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .menu-tab {
+        width: 100%;
+        max-width: 360px;
+        text-align: center;
+        padding: 0.78rem 0.9rem;
+    }
+
+    .menu-grid {
+        gap: 1.3rem;
+    }
+
+    .menu-item-image {
+        height: min(52vw, 240px);
+    }
+
+    .menu-item-content {
+        padding: 1.15rem;
+    }
+
+    .menu-item-title {
+        font-size: 1.3rem;
+    }
+
+    .gallery {
+        padding-inline: 1.2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact {
+        gap: 1.8rem;
+    }
+
+    .contact-info h3 {
+        font-size: 1.75rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .contact-detail {
+        margin-bottom: 1.1rem;
+    }
+
+    .contact-detail p {
+        line-height: 1.65;
+    }
+
+    .map-container {
+        height: 320px;
+    }
+
+    footer {
+        padding: 3rem 1.2rem;
+    }
+
+    .footer-links {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        top: 6px;
+        width: calc(100% - 0.75rem);
+        padding: 0.55rem 0.75rem;
+    }
+
+    .nav-menu {
+        top: 68px;
+        width: calc(100% - 0.75rem);
+        max-height: calc(100dvh - 82px);
+        padding: 0.85rem;
+    }
+
+    .hero {
+        padding-top: 108px;
+    }
+
+    .hero-content {
+        padding: 0.35rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 11vw, 2.5rem);
+        letter-spacing: 1.1px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: none;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+
+    .section-title {
+        font-size: clamp(1.85rem, 9.2vw, 2.2rem);
+    }
+
+    .about-image {
+        height: min(80vw, 310px);
+        box-shadow: 7px 7px 0 var(--gold);
+    }
+
+    .booking-form {
+        padding: 1rem;
+    }
+
+    .menu-item-content {
+        padding: 1rem;
+    }
+
+    .contact-detail h4 {
+        font-size: 1rem;
+    }
+
+    .map-container {
+        height: 270px;
+    }
+
+    .menu-item-title,
+    .menu-item-description,
+    .menu-item-price,
+    .about-content p,
+    .contact-detail p,
+    .section-subtitle,
+    .nav-profile-name {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+}
